@@ -4,7 +4,6 @@ DELIMITER $$
 
 CREATE FUNCTION my_id() RETURNS TEXT(36) DETERMINISTIC NO SQL RETURN (SELECT @@global.server_uuid as my_id);$$
 
--- new function, contribution from Bruce DeFrang
 CREATE FUNCTION gr_member_in_primary_partition()
     RETURNS VARCHAR(3)
     DETERMINISTIC
